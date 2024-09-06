@@ -1,0 +1,20 @@
+.achievements {
+  text-align: center;
+  background-color: #0b0b0b;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.achievement-card {
+  background-color: #002366;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
