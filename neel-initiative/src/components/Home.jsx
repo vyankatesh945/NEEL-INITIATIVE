@@ -7,7 +7,7 @@ const Home = () => {
       <div className="content">
         <h1>Create a Change <br /> With Neel-Initiative</h1>
         <p>
-          Submit better job applications 10x faster. AI-powered tools to help you build resumes, cover letters, and more.
+          Submit better job app - 10x faster. AI   cover letter <br/> generator, resume keyword checker, outreach message <br/> writer, and more. Powered by GPT.
         </p>
         <div className="newsletter">
           <input type="text" placeholder="Subscribe to our Newsletter" />

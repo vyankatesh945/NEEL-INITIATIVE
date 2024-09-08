@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#team">Meet Our Team</a></li>
+        {/* <li><a href="#team">Meet Our Team</a></li> */}
       </ul>
       <div className="auth-buttons">
         <button className="sign-in">Sign In</button>
