@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Achievements from "./components/Achievements";
+import Projects from "./components/Projects";
 // import Footer if needed later
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Achievements />
-      {/* Add other pages as needed */}
+      <Projects />
     </div>
   );
 };
