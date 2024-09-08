@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Achievements from "./components/Achievements";
 import Projects from "./components/Projects";
-// import Footer if needed later
+import MeetOurTeam from "./components/MeetOurTeam";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
       <Home />
       <Achievements />
       <Projects />
+      <MeetOurTeam />
     </div>
   );
 };

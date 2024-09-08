@@ -1,0 +1,128 @@
+.meet-our-team-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #1a2d5e; 
+  color: white;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meet-our-team-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.meet-our-team-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.meet-our-team-button {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  align-content: center;
+}
+ /* .meet-our-team-container {
+  text-align: center; 
+ } */
+
+
+.meet-our-team-button:hover {
+  background-color: white;
+  color: #1a2d5e;
+}
+
+/* Flex container for the two sections */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 50px;
+}
+
+/* Ongoing Projects section */
+.ongoing-projects {
+  text-align: left;
+  width: 45%;
+}
+
+.ongoing-projects h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.ongoing-projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ongoing-projects li {
+  margin-bottom: 10px;
+}
+
+.ongoing-projects a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.ongoing-projects a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Us section */
+.contact-us {
+  text-align: right;
+  width: 45%;
+}
+
+.contact-us h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-us a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-left: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
