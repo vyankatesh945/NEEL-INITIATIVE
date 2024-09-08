@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.css";
 import ProjectImage1 from "/images/project1.png"; 
-import ProjectImage2 from "/images/project1.png";  
+import ProjectImage2 from "/images/project2.png";  
 
 const Projects = () => {
   return (
