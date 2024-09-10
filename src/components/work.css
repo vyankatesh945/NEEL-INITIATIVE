@@ -57,11 +57,12 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 .w{
     width: 320px;
     height: 400px;
+    border-radius: 20px;
     background-color: #FFFFFF;
 }
 .w p{
