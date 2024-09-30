@@ -2,56 +2,39 @@ import React, { useState } from "react";
 import "./Projects.css";
 import ProjectImage1 from "/images/project1.png";
 import ProjectImage2 from "/images/project2.png";
-import ProjectImage3 from "/images/project2.png";  
+import ProjectImage3 from "/images/project2.png";
 import ProjectVideo1 from "/videos/kungfu.mp4";
 import ProjectVideo2 from "/videos/pacman.mp4";
-import ProjectVideo3 from "/videos/lunar.mp4";  
+import ProjectVideo3 from "/videos/lunar.mp4";
 
 const Projects = () => {
-  
-  const [isExpanded1, setIsExpanded1] = useState(false); 
-  const [isExpanded2, setIsExpanded2] = useState(false); 
-  const [isExpanded3, setIsExpanded3] = useState(false); 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
-
-  const toggleExpand1 = () => {
-    setIsExpanded1(!isExpanded1);
+  const openModal = (projectId) => {
+    setCurrentProject(projectId);
+    setModalOpen(true);
   };
 
-  const toggleExpand2 = () => {
-    setIsExpanded2(!isExpanded2);
+  const closeModal = () => {
+    setModalOpen(false);
+    setCurrentProject(null);
   };
 
-  const toggleExpand3 = () => {
-    setIsExpanded3(!isExpanded3);
+  const handleClickOutside = (e) => {
+    if (e.target.className === "modal") {
+      closeModal(); 
+    }
   };
 
   return (
     <section className="projects-section" id="projects">
-      {/* Project 1 */}
+      
       <div className="project">
         <div className="project-details">
           <h2>Project-1</h2>
-          <p>
-            Project Description - We are working on this project since [start
-            date]. Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-            {isExpanded1 ? (
-              <>
-                <span>
-                  Here is the detailed description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus et felis efficitur aliquam.
-                </span>
-                <video controls>
-                  <source src={ProjectVideo1} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </>
-            ) : (
-              <span>...</span>
-            )}
-          </p>
-          <button className="read-more-btn" onClick={toggleExpand1}>
-            {isExpanded1 ? "Read Less" : "Read More"}
-          </button>
+          <p>Project Description - We are working on this project since [start date]. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <button className="read-more-btn" onClick={() => openModal(1)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
         <div className="project-image">
@@ -59,67 +42,50 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Project 2 */}
+      
       <div className="project">
         <div className="project-image">
           <img src={ProjectImage2} alt="Project 2" />
         </div>
         <div className="project-details">
           <h2>Project-2</h2>
-          <p>
-            Project Description - [Short description here]. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit...
-            {isExpanded2 ? (
-              <>
-                <span>
-                  Here is the detailed description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus et felis efficitur aliquam.
-                </span>
-                <video controls>
-                  <source src={ProjectVideo2} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </>
-            ) : (
-              <span>...</span>
-            )}
-          </p>
-          <button className="read-more-btn" onClick={toggleExpand2}>
-            {isExpanded2 ? "Read Less" : "Read More"}
-          </button>
+          <p>Project Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit...fjkdshfkjhasfkjhkjsdhfkjdsjkfhjkahfjjdsahfjkhadskfjhajkshfjkahsfkjhdasjkfhhasfkjashdfjkhasdjkfhasjkdhfkjashfjkhasdfjkhasjkdhfjkdhsafjkhdsajkfhjksadhfkjadshfjkhsdajkfhadsjkhfkjhdskj</p>
+          <button className="read-more-btn" onClick={() => openModal(2)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
       </div>
 
-      {/* Project 3 */}
+      
       <div className="project">
         <div className="project-details">
           <h2>Project-3</h2>
-          <p>
-            Project Description - We are working on this project since [start
-            date]. Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-            {isExpanded3 ? (
-              <>
-                <span>
-                  Here is the detailed description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula risus et felis efficitur aliquam.
-                </span>
-                <video controls>
-                  <source src={ProjectVideo3} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </>
-            ) : (
-              <span>...</span>
-            )}
-          </p>
-          <button className="read-more-btn" onClick={toggleExpand3}>
-            {isExpanded3 ? "Read Less" : "Read More"}
-          </button>
+          <p>Project Description - We are working on this project since [start date]. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <button className="read-more-btn" onClick={() => openModal(3)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
         <div className="project-image">
           <img src={ProjectImage3} alt="Project 3" />
         </div>
       </div>
+
+      
+      {modalOpen && (
+        <div className="modal" onClick={handleClickOutside}>
+          <div className="modal-content">
+            <button className="close-btn" onClick={closeModal}>&times;</button>
+            <div className="expanded-description">
+              {currentProject === 1 && <p>Detailed description for Project 1. Lorem ipsum dolor sit amet...</p>}
+              {currentProject === 2 && <p>Detailed description for Project 2. Lorem ipsum dolor sit amet...</p>}
+              {currentProject === 3 && <p>Detailed description for Project 3. Lorem ipsum dolor sit amet...</p>}
+            </div>
+            <div className="expanded-video">
+              {currentProject === 1 && <video controls><source src={ProjectVideo1} type="video/mp4" /></video>}
+              {currentProject === 2 && <video controls><source src={ProjectVideo2} type="video/mp4" /></video>}
+              {currentProject === 3 && <video controls><source src={ProjectVideo3} type="video/mp4" /></video>}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
