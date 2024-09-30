@@ -34,7 +34,7 @@
   margin-bottom: 20px;
 }
 
-.contribute-btn {
+.contribute-btn, .read-more-btn {
   padding: 10px 20px;
   border: 1px solid #FFF;
   background: transparent;
@@ -42,9 +42,10 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s;
+  margin-right: 10px; 
 }
 
-.contribute-btn:hover {
+.contribute-btn:hover, .read-more-btn:hover {
   background-color: #00FFFF; /* Cyan hover effect */
   color: #000;
 }
@@ -61,6 +62,29 @@
   height: auto;
 }
 
+.project-expanded {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.project-expanded .expanded-description, .project-expanded .expanded-video {
+  flex: 1;
+  padding: 20px;
+  color: #FFF;
+}
+
+.expanded-video video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.expanded-description {
+  font-size: 1.1rem;
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .project {
     flex-direction: column;
@@ -69,5 +93,17 @@
 
   .project-image {
     margin-bottom: 20px;
+  }
+
+  .project-expanded {
+    flex-direction: column;
+  }
+
+  .project-expanded .expanded-description, .project-expanded .expanded-video {
+    padding: 10px;
+  }
+
+  .expanded-video video {
+    margin-top: 20px;
   }
 }
