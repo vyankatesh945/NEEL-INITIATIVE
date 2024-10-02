@@ -5,9 +5,10 @@ const Home = () => {
   return (
     <section className="home" id="home">
       <div className="content">
-        <h1>Create a Change <br /> With Neel-Initiative</h1>
+        <h1>Welcome to NEEL-INITIATIVE: Pioneering the Future with AI
+        </h1>
         <p>
-          Submit better job app - 10x faster. AI   cover letter <br/> generator, resume keyword checker, outreach message <br/> writer, and more. Powered by GPT.
+        At NEEL-INITIATIVE, we are at the forefront of revolutionizing industries through cutting-edge AI solutions. <br></br>From empowering Indian farmers with precision technology to advancing medical diagnostics, self-driving vehicles, <br></br>and space exploration, we are committed to making tomorrow’s innovations accessible today. Join us as we create smarter, <br></br>more efficient systems for a better, more connected world.
         </p>
         <div className="newsletter">
           <input type="text" placeholder="Subscribe to our Newsletter" />
