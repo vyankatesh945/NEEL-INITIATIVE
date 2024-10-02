@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Projects.css";
-import ProjectImage1 from "/images/project1.png";
-import ProjectImage2 from "/images/project2.png";
-import ProjectImage3 from "/images/project2.png";
+import ProjectImage1 from "/images/kungfu.png";
+import ProjectImage2 from "/images/lunar.png";
+import ProjectImage3 from "/images/pacman.png";
 import ProjectVideo1 from "/videos/kungfu.mp4";
 import ProjectVideo2 from "/videos/pacman.mp4";
 import ProjectVideo3 from "/videos/lunar.mp4";
@@ -110,10 +110,23 @@ const Projects = () => {
               The goal of the project is to achieve a score of more than 500 by learning the complex dynamics of the game with AI. This demonstrates the potential of reinforcement learning models to develop intelligent behavior in dynamic environments. and unpredictable and emphasizes AI's ability to imitate human-like strategic thinking in games...</p>}
             </div>
             <div className="expanded-video">
-              {currentProject === 1 && <video controls><source src={ProjectVideo1} type="video/mp4" /></video>}
-              {currentProject === 2 && <video controls><source src={ProjectVideo2} type="video/mp4" /></video>}
-              {currentProject === 3 && <video controls><source src={ProjectVideo3} type="video/mp4" /></video>}
-            </div>
+  {currentProject === 1 && (
+    <video autoPlay muted={false}>
+      <source src={ProjectVideo1} type="video/mp4" />
+    </video>
+  )}
+  {currentProject === 2 && (
+    <video autoPlay muted={false}>
+      <source src={ProjectVideo2} type="video/mp4" />
+    </video>
+  )}
+  {currentProject === 3 && (
+    <video autoPlay muted={false}>
+      <source src={ProjectVideo3} type="video/mp4" />
+    </video>
+  )}
+</div>
+
           </div>
         </div>
       )}

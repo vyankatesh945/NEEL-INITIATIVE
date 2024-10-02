@@ -58,8 +58,8 @@
 }
 
 .project-image img {
-  max-width: 400px;
-  height: auto;
+  max-width: 350px;
+  height: 350px;
 }
 
 /* Modal styles */
