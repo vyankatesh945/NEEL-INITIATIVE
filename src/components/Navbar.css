@@ -6,6 +6,14 @@
   background-color: #000;
 }
 
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 100px;
+  width: 100px;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -15,21 +23,13 @@
   margin-right: 50px;
 }
 
-.logo{
-  
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  height: 100px;
-  width:100px;
-}
-
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
+/* Auth Buttons */
 .auth-buttons {
   display: flex;
 }
@@ -46,4 +46,35 @@
   color: white;
 }
 
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sign-in, .get-started {
+    width: 48%;
+    margin-left: 0;
+  }
+}

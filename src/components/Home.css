@@ -1,6 +1,9 @@
-*{
+/* Global reset */
+* {
   margin: 0;
 }
+
+/* Home section styles */
 .home {
   height: 70vh;
   background-color: #000;
@@ -23,11 +26,11 @@
   color: antiquewhite;
 }
 
+/* Newsletter input and button */
 .newsletter {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .newsletter input {
@@ -46,3 +49,45 @@
   cursor: pointer;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem; /* Reduce the font size for mobile */
+    margin-bottom: 30px;
+  }
+
+  .content p {
+    font-size: 1rem; /* Slightly smaller text */
+    margin-bottom: 20px;
+  }
+
+  .newsletter input {
+    padding: 8px;
+    width: 200px; /* Limit width of input field */
+    font-size: 0.9rem;
+  }
+
+  .newsletter button {
+    padding: 8px 15px; /* Adjust button padding */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 2rem; /* Further reduce font size for very small screens */
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .newsletter input {
+    width: 180px;
+  }
+}
