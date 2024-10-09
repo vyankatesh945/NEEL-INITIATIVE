@@ -30,13 +30,13 @@ const MeetOurTeam = () => {
           <div className="social-icons">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <img src="instagram-icon.png" alt="Instagram" />
-            </a>
+            </a><br></br>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <img src="facebook-icon.png" alt="Facebook" />
-            </a>
+            </a><br></br>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
               <img src="linkedin-icon.png" alt="LinkedIn" />
-            </a>
+            </a><br></br>
             <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
               <img src="telegram-icon.png" alt="Telegram" />
             </a>
