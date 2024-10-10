@@ -33,7 +33,7 @@ const MeetOurTeam = () => {
           <h3>Contact Us</h3>
           <a href="mailto:support@gmail.com"><SiGmail /> neelinitiative@gmail.com</a>
           
-          <div className="social-icons">
+          <div className="soncial-icons">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               {/* <img src="instagram-icon.png" alt="Instagram" /> */}
               <FaInstagram /> Instagram
