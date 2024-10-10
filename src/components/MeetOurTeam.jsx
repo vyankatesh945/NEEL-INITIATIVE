@@ -31,22 +31,22 @@ const MeetOurTeam = () => {
 
         <div className="contact-us">
           <h3>Contact Us</h3>
-          <a href="mailto:support@gmail.com"><SiGmail /> support@gmail.com</a>
+          <a href="mailto:support@gmail.com"><SiGmail /> neelinitiative@gmail.com</a>
           
           <div className="social-icons">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               {/* <img src="instagram-icon.png" alt="Instagram" /> */}
               <FaInstagram /> Instagram
-            </a><br></br>
+            </a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               {/* <img src="facebook-icon.png" alt="Facebook" /> */}
               {/* <FaFacebook /> */}
               <FaFacebook /> Facebook
-            </a><br></br>
+            </a>
             <a href="http://www.linkedin.com/in/vyankatesh-sharma-08b392239" target="_blank" rel="noopener noreferrer">
               {/* <img src="linkedin-icon.png" alt="LinkedIn" /> */}
               <FaLinkedin /> LinkedIn
-            </a><br></br>
+            </a>
             <a href="https://t.me/neelinitiative" target="_blank" rel="noopener noreferrer">
               {/* <img src="telegram-icon.png" alt="Telegram" /> */}
               <FaTelegram /> Telegram
