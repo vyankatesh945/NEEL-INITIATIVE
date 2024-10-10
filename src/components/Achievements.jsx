@@ -30,10 +30,10 @@ import '../components/Achievements.css';
 
 const Achievements = () => {
   const [images, setImages] = useState([
-    "/images/achievements/img1.jpg",
-    "/images/achievements/img2.jpg",
-    "/images/achievements/img3.jpg",
-    "/images/achievements/img4.jpg"
+    "./images/achievements/img1.jpg",
+    "./images/achievements/img2.jpg",
+    "./images/achievements/img3.jpg",
+    "./images/achievements/img4.jpg"
   ]);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
