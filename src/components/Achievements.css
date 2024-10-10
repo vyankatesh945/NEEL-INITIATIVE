@@ -1,3 +1,4 @@
+/*
 .achievements {
   text-align: center;
   background-color: #0b0b0b;
@@ -5,16 +6,126 @@
   padding: 4rem 2rem;
 }
 
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.achievements-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.achievement-card {
-  background-color: #002366;
-  padding: 2rem;
-  border-radius: 10px;
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio 
+}
+
+.slide-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.indicator.active {
+  opacity: 1;
+}
+*/
+
+.inner-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black; 
+}
+
+.achievements-heading {
+  color: white; 
+  margin-bottom: 20px; 
+  font-size: 2rem; 
+}
+
+.slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px; 
+  overflow: hidden; 
+}
+
+.slider-image {
+  width: 100%; 
+  border-radius: 10px;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: beige;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
