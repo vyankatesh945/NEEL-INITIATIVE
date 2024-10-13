@@ -84,20 +84,20 @@
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 150vh;
   background-color: black; 
 }
 
 .achievements-heading {
   color: white; 
   margin-bottom: 20px; 
-  font-size: 2rem; 
+  font-size: 4rem; 
 }
 
 .slider-container {
   position: relative;
   width: 90%;
-  max-width: 800px; 
+  max-width: 1500px; 
   overflow: hidden; 
 }
 
