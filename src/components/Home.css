@@ -24,6 +24,7 @@
 }
 
 .newsletter {
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,4 +45,7 @@
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+}
+.subscribe-btn{
+  color: black;
 }
