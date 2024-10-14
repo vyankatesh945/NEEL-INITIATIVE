@@ -5,17 +5,21 @@ import next from '/images/nextprevious/next-svgrepo-com.svg';
 
 const OngoingProjects = () => {
   const [images, setImages] = useState([
-    "/images/ongoingprojects/project3.png",
-    "/images/achievements/img2.jpg",
-    "/images/achievements/img3.jpg",
-    "/images/achievements/img4.jpg"
+    "/images/ongoingprojects/agriculture.jpg",
+    "/images/ongoingprojects/moon.jpg",
+    "/images/ongoingprojects/game.jpg",
+    "/images/ongoingprojects/project3.png"
+    
+    // "/images/achievements/img2.jpg",
+    // "/images/achievements/img3.jpg",
+    // "/images/achievements/img4.jpg"
   ]);
 
   const [captions, setCaptions] = useState([
-    "caption 1",
-    "caption 2",
-    "caption 3",
-    "caption 4"
+    "Agriculture Project",
+    "Moon Landing Page",
+    "Game Project",
+    "Project 4"
   ]);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
