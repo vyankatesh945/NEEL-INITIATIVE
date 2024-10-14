@@ -18,6 +18,11 @@
   max-width: 1200px;
 }
 
+.projects-heading {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
 .project-details {
   flex: 1;
   color: #FFF;

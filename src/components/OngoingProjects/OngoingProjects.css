@@ -1,0 +1,74 @@
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background-color: black;
+}
+
+.achievements-heading {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+.slider-container {
+  position: relative;
+  width: 90%;
+  max-width: 1500px;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: beige;
+  border: none;
+  padding: 15px; 
+  cursor: pointer;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-button {
+  left: 10px;
+  z-index: 1; 
+} 
+
+.next-button {
+  right: 10px;
+  z-index: 1;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-button img, .next-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.prev-button:hover img, .next-button:hover img {
+  width: 70px; 
+  height: 70px;
+}
+
+.slider-caption {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+}

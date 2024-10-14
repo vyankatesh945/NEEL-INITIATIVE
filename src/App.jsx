@@ -5,6 +5,7 @@ import Achievements from "./components/Achievements";
 import Projects from "./components/Projects";
 import MeetOurTeam from "./components/MeetOurTeam";
 import Work from "./components/work";
+import OngoingProjects from "./components/OngoingProjects/OngoingProjects";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Achievements />
       <Projects />
       <MeetOurTeam />
+      <OngoingProjects/>
     </div>
   );
 };

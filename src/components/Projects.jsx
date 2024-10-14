@@ -29,8 +29,10 @@ const Projects = () => {
 
   return (
     <section className="projects-section" id="projects">
+      <h1 className="projects-heading">Projects</h1>
       
       <div className="project">
+      {/* <h1 className="projects-heading">Projects</h1> */}
         <div className="project-details">
           <h2>AI Kung Fu Game</h2>
           <p>The AI Kung Fu Game Project is an innovative experiment where an AI is trained to play a classic Kung Fu arcade game using its own virtual "brain" and "eyes."</p>
