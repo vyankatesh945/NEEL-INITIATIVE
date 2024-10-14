@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../components/Achievements.css';
 import previous from '/images/nextprevious/previous-svgrepo-com.svg'; 
 import next from '/images/nextprevious/next-svgrepo-com.svg'; 
+// import "aos/demo/aos.css";
+import AOS from 'aos';
+import "aos/dist/aos.css"
 
 const Achievements = () => {
+
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  })
+
   const [images, setImages] = useState([
     "/images/achievements/img1.jpg",
     "/images/achievements/img2.jpg",
@@ -32,7 +40,7 @@ const Achievements = () => {
 
   return (
     <div className="inner-container">
-      <h1 className="achievements-heading">Achievements</h1>
+      <h1 className="achievements-heading" data-aos="fade-down">Achievements</h1>
       <div className="slider-container">
         {/* Previous Button with Image Fallback */}
         <button onClick={handlePrev} className="prev-button">

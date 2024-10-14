@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import ProjectImage1 from "/images/kungfu.png";
 import ProjectImage2 from "/images/lunar.png";
@@ -6,8 +6,14 @@ import ProjectImage3 from "/images/pacman.png";
 import ProjectVideo1 from "/videos/kungfu.mp4";
 import ProjectVideo2 from "/videos/pacman.mp4";
 import ProjectVideo3 from "/videos/lunar.mp4";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const Projects = () => {
+
+  useEffect(()=>{
+    AOS.init({duration:2000})
+  })
   const [modalOpen, setModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
 
@@ -29,17 +35,17 @@ const Projects = () => {
 
   return (
     <section className="projects-section" id="projects">
-      <h1 className="projects-heading">Projects</h1>
+      <h1 className="projects-heading" data-aos="fade-down">Projects</h1>
       
       <div className="project">
       {/* <h1 className="projects-heading">Projects</h1> */}
         <div className="project-details">
-          <h2>AI Kung Fu Game</h2>
-          <p>The AI Kung Fu Game Project is an innovative experiment where an AI is trained to play a classic Kung Fu arcade game using its own virtual "brain" and "eyes."</p>
+          <h2 data-aos="fade-down">AI Kung Fu Game</h2>
+          <p data-aos="fade-right">The AI Kung Fu Game Project is an innovative experiment where an AI is trained to play a classic Kung Fu arcade game using its own virtual "brain" and "eyes."</p>
           <button className="read-more-btn" onClick={() => openModal(1)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
-        <div className="project-image">
+        <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage1} alt="AI Kung Fu Game" />
         </div>
       </div>
@@ -47,12 +53,12 @@ const Projects = () => {
 
       <div className="project">
         <div className="project-details">
-          <h2>AI Lunar Landing</h2>
-          <p>The AI Lunar Landing Project is a groundbreaking initiative in which an AI is trained to autonomously land a rocket on the moon using its own "brain" and "sensors".</p>
+          <h2 data-aos="fade-down">AI Lunar Landing</h2>
+          <p data-aos="fade-right">The AI Lunar Landing Project is a groundbreaking initiative in which an AI is trained to autonomously land a rocket on the moon using its own "brain" and "sensors".</p>
           <button className="read-more-btn" onClick={() => openModal(3)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
-        <div className="project-image">
+        <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage2} alt="AI Lunar Landing" />
         </div>
       </div>
@@ -73,12 +79,12 @@ const Projects = () => {
       
       <div className="project">
         <div className="project-details">
-          <h2>AI Pac-Man Game</h2>
-          <p>The AI Pac-Man Game Project is an advanced AI experiment where a neural network-based AI is trained to play the classic Pac-Man game using its own "brain" and "eyes". </p>
+          <h2 data-aos="fade-down">AI Pac-Man Game</h2>
+          <p data-aos="fade-right">The AI Pac-Man Game Project is an advanced AI experiment where a neural network-based AI is trained to play the classic Pac-Man game using its own "brain" and "eyes". </p>
           <button className="read-more-btn" onClick={() => openModal(2)}>Read More</button>
           <button className="contribute-btn">Contribute to the project</button>
         </div>
-        <div className="project-image">
+        <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage3} alt="AI Pac-Man Game" />
         </div>
       </div>

@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import '../components/OngoingProjects/OngoinProjects.css';
 import previous from '/images/nextprevious/previous-svgrepo-com.svg'; 
 import next from '/images/nextprevious/next-svgrepo-com.svg'; 
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 const OngoingProjects = () => {
+
+  useEffect(()=>{
+    AOS.init({duration:1200})
+  })
+
   const [images, setImages] = useState([
     "/images/ongoingprojects/agriculture.jpg",
     "/images/ongoingprojects/moon.jpg",
@@ -36,7 +43,7 @@ const OngoingProjects = () => {
 
   return (
     <div className="inner-container">
-      <h1 className="achievements-heading">Ongoing Projects</h1>
+      <h1 className="achievements-heading" data-aos="fade-down">Ongoing Projects</h1>
       <div className="slider-container">
         {/* Previous Button with Image Fallback */}
         <button onClick={handlePrev} className="prev-button">
