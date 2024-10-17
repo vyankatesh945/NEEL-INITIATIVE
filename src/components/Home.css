@@ -1,8 +1,11 @@
-*{
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .home {
-  height: 70vh;
+  height: 50vh; 
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -10,11 +13,12 @@
   flex-direction: column;
   text-align: center;
   color: #00ffff;
+  padding-top: 100px; 
 }
 
 .content h1 {
-  font-size: 5rem;
-  margin-bottom: 50px;
+  font-size: 4rem;
+  margin-bottom: 30px;
 }
 
 .content p {
@@ -28,7 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .newsletter input {
@@ -46,6 +49,27 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-.subscribe-btn{
+
+.subscribe-btn {
   color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 80px; 
+  }
+
+  .content h1 {
+    font-size: 2rem; 
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    font-size: 0.9rem; 
+  }
 }

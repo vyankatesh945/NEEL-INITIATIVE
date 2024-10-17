@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  background-color: #00008B; 
+  background-color: #00008B;
 }
 
 .project {
@@ -13,16 +13,19 @@
   margin-bottom: 50px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #00008B; 
+  background-color: #00008B;
   width: 100%;
   max-width: 1200px;
+  flex-wrap: wrap; 
 }
 
 .projects-heading {
   color: white;
   margin-bottom: 20px;
   font-size: 4rem;
+  text-align: center; 
 }
+
 .project-details {
   flex: 1;
   color: #FFF;
@@ -51,7 +54,7 @@
 }
 
 .contribute-btn:hover, .read-more-btn:hover {
-  background-color: #00FFFF; /* Cyan hover effect */
+  background-color: #00FFFF; 
   color: #000;
 }
 
@@ -60,11 +63,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%; 
 }
 
 .project-image img {
-  max-width: 350px;
-  height: 350px;
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
 }
 
 /* Modal styles */
@@ -77,47 +82,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.8); 
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+  padding: 20px; 
 }
 
 /* Modal content layout */
 .modal-content {
   background-color: #00008B;
   padding: 30px;
-  width: 75%;
-  height: 75%;
+  width: 90%; 
+  height: 90%; 
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
   color: #FFF;
   position: relative;
+  flex-direction: column; 
 }
 
 /* Left side: Description */
 .expanded-description {
-  flex: 1; /* Take up 50% of the space */
+  flex: 1;
   padding: 20px;
-  overflow-y: auto; /* Enable scrolling for long content */
+  overflow-y: auto; 
 }
 
 /* Right side: Video */
 .expanded-video {
-  flex: 1; /* Take up 50% of the space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Add some padding for aesthetic spacing */
+  padding: 20px;
 }
 
 .expanded-video video {
-  width: 100%; /* Ensure the video fills its container */
-  height: 100%; /* Ensure the video maintains the right aspect ratio */
-  object-fit: cover; /* Ensures the video is cropped/expanded to fit its container without stretching */
-  border-radius: 10px; /* Add rounded corners for a smoother look */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -129,7 +135,6 @@
   cursor: pointer;
 }
 
-/* Scrollbar styling for description */
 .expanded-description::-webkit-scrollbar {
   width: 6px;
 }
@@ -141,8 +146,35 @@
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 30px;
+  }
+
+  .project {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .project-image {
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  .projects-heading {
+    font-size: 3rem; 
+  }
+
+  .project-details h2 {
+    font-size: 2rem; 
+  }
+
+  .project-details p {
+    font-size: 1rem; 
+  }
+
   .modal-content {
-    flex-direction: column; /* Stack description and video vertically */
+    width: 90%;
+    height: auto; 
   }
 
   .expanded-description, .expanded-video {
