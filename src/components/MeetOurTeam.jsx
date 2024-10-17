@@ -13,7 +13,7 @@ const MeetOurTeam = () => {
       <p className="meet-our-team-description">
         Neel-Initiative is lucky to have a wonderful team that....
       </p>
-      <a href="/team" className="meet-our-team-button">
+      <a href="/team.html" className="meet-our-team-button">
         See the entire team
       </a>
 
