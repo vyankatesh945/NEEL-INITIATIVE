@@ -8,7 +8,7 @@ import { SiGmail } from "react-icons/si";
 
 const MeetOurTeam = () => {
   return (
-    <section className="meet-our-team-section">
+    <section className="meet-our-team-section" id="meet-our-team-section">
       <h1 className="meet-our-team-title">Meet Our Team</h1>
       <p className="meet-our-team-description">
         Neel-Initiative is lucky to have a wonderful team that....

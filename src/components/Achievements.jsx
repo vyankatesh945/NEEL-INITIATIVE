@@ -39,6 +39,7 @@ const Achievements = () => {
   };
 
   return (
+    <section className="achievements" id="achievements">
     <div className="inner-container">
       <h1 className="achievements-heading" data-aos="fade-down">Achievements</h1>
       <div className="slider-container">
@@ -76,6 +77,7 @@ const Achievements = () => {
         </button>
       </div>
     </div>
+    </section>
   );
 };
 

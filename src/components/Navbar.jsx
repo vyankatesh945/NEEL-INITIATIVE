@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import meetourteam from "./MeetOurTeam";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,9 +18,10 @@ const Navbar = () => {
       <div className={`nav-links ${isMobile ? "mobile-menu" : ""}`}>
         <li><a href="#home">Home</a></li>
         <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#work">Work</a></li>
+        {/* <li><a href="#work">Work</a></li> */}
         <li><a href="#projects">Projects</a></li>
         {/* <li><a href="#team">Meet Our Team</a></li> */}
+        <li><a href="#meet-our-team-section">MeetOurTeam</a></li>
       </div>
 
       <div className="menu-icon" onClick={toggleMenu}>
