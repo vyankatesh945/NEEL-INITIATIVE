@@ -43,7 +43,7 @@ const Projects = () => {
           <h2 data-aos="fade-down">AI Kung Fu Game</h2>
           <p data-aos="fade-right">The AI Kung Fu Game Project is an innovative experiment where an AI is trained to play a classic Kung Fu arcade game using its own virtual "brain" and "eyes."</p>
           <button className="read-more-btn" onClick={() => openModal(1)}>Read More</button>
-          <button className="contribute-btn">Contribute to the project</button>
+          {/* <button className="contribute-btn">Contribute to the project</button> */}
         </div>
         <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage1} alt="AI Kung Fu Game" />
@@ -56,7 +56,7 @@ const Projects = () => {
           <h2 data-aos="fade-down">AI Lunar Landing</h2>
           <p data-aos="fade-right">The AI Lunar Landing Project is a groundbreaking initiative in which an AI is trained to autonomously land a rocket on the moon using its own "brain" and "sensors".</p>
           <button className="read-more-btn" onClick={() => openModal(3)}>Read More</button>
-          <button className="contribute-btn">Contribute to the project</button>
+          {/* <button className="contribute-btn">Contribute to the project</button> */}
         </div>
         <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage2} alt="AI Lunar Landing" />
@@ -82,7 +82,7 @@ const Projects = () => {
           <h2 data-aos="fade-down">AI Pac-Man Game</h2>
           <p data-aos="fade-right">The AI Pac-Man Game Project is an advanced AI experiment where a neural network-based AI is trained to play the classic Pac-Man game using its own "brain" and "eyes". </p>
           <button className="read-more-btn" onClick={() => openModal(2)}>Read More</button>
-          <button className="contribute-btn">Contribute to the project</button>
+          {/* <button className="contribute-btn">Contribute to the project</button> */}
         </div>
         <div className="project-image" data-aos="fade-left">
           <img src={ProjectImage3} alt="AI Pac-Man Game" />
