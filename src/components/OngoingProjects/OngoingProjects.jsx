@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import '../components/OngoingProjects/OngoinProjects.css';
 import previous from '/images/nextprevious/previous-svgrepo-com.svg'; 
 import next from '/images/nextprevious/next-svgrepo-com.svg'; 
 import AOS from 'aos';
@@ -7,40 +6,34 @@ import "aos/dist/aos.css";
 
 const OngoingProjects = () => {
 
-  useEffect(()=>{
-    AOS.init({duration:1200})
-  })
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  }, []);
 
-  const [images, setImages] = useState([
-    "/images/ongoingprojects/agriculture.jpg",
-    "/images/ongoingprojects/moon.jpg",
-    "/images/ongoingprojects/game.jpg",
-    "/images/ongoingprojects/project3.png"
-    // "/videos/ongoing-projects/agriculture.mp4"
-    
-    // "/images/achievements/img2.jpg",
-    // "/images/achievements/img3.jpg",
-    // "/images/achievements/img4.jpg"
+  const [media, setMedia] = useState([
+    "/images/ongoingprojects/agriculture.jpg",  
+    "/images/ongoingprojects/moon.jpg",        
+    "/videos/ongoing-projects/agriculture.mp4", 
+    "/images/ongoingprojects/project3.png"     
   ]);
 
   const [captions, setCaptions] = useState([
     "Agriculture Project",
     "Moon Landing Page",
-    "Game Project",
-    "Project 4",
-    "good"
+    "Video Project: Autonomous System",        
+    "Project 4"
   ]);
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [prevImageError, setPrevImageError] = useState(false);
-  const [nextImageError, setNextImageError] = useState(false);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const [prevMediaError, setPrevMediaError] = useState(false);
+  const [nextMediaError, setNextMediaError] = useState(false);
 
   const handlePrev = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentMediaIndex((prevIndex) => (prevIndex === 0 ? media.length - 1 : prevIndex - 1));
   };
 
   const handleNext = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentMediaIndex((prevIndex) => (prevIndex === media.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
@@ -52,21 +45,33 @@ const OngoingProjects = () => {
           <img
             src={previous} 
             alt="Previous"
-            onError={() => setPrevImageError(true)} 
-            style={{ display: prevImageError ? 'none' : 'block' }} 
+            onError={() => setPrevMediaError(true)} 
+            style={{ display: prevMediaError ? 'none' : 'block' }} 
           />
-          {prevImageError && "Previous"}
+          {prevMediaError && "Previous"}
         </button>
 
-  <img 
-          src={images[currentImageIndex]} 
-          alt={`Slide ${currentImageIndex + 1}`} 
-          className="slider-image" 
-        />
+        {/* Rendering images and VideoS*/}
+        {currentMediaIndex === 2 ? (
+          <video
+            src={media[currentMediaIndex]}
+            className="slider-image"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ width: '100%', borderRadius: '10px' }}
+          />
+        ) : (
+          <img 
+            src={media[currentMediaIndex]} 
+            alt={`Slide ${currentMediaIndex + 1}`} 
+            className="slider-image" 
+          />
+        )}
 
-
-           <div className="slider-caption">
-          <p>{captions[currentImageIndex]}</p>
+        <div className="slider-caption">
+          <p>{captions[currentMediaIndex]}</p>
         </div>
 
         {/* Next Button with Image Fallback */}
@@ -74,14 +79,14 @@ const OngoingProjects = () => {
           <img
             src={next}  
             alt="Next"
-            onError={() => setNextImageError(true)} 
-            style={{ display: nextImageError ? 'none' : 'block' }} 
+            onError={() => setNextMediaError(true)} 
+            style={{ display: nextMediaError ? 'none' : 'block' }} 
           />
-          {nextImageError && "Next"}
+          {nextMediaError && "Next"}
         </button>
       </div>
     </div>
   );
 };
 
-export default OngoingProjects;  
+export default OngoingProjects;
