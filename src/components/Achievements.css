@@ -64,11 +64,42 @@
   height: 70px;
 }
 
-.slider-caption {
+/* .slider-caption {
   margin-top: 10px;
   font-size: 1.2rem;
   color: white;
   text-align: center;
   max-width: 90%;
   word-wrap: break-word;
+} */
+
+/* For the container holding the caption */
+.slider-caption {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 50px; /* Set a fixed height */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background */
+  display: flex;
+  align-items: center; 
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.caption-text {
+  position: absolute;
+  white-space: nowrap; /* Keep text in one line */
+  animation: scroll-left 10s linear infinite; /* Animation for scrolling */
+}
+
+/* Keyframe animation to move text leftwards */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
