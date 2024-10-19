@@ -64,7 +64,7 @@ const Home = () => {
           }}
           />
         </p>
-        <div className="newsletter">
+        <div className="newsletter" data-aos="fade-up">
           <input type="text" placeholder="Subscribe to our Newsletter" />
           <button className="subscribe-btn">Start For Free</button>
         </div>
