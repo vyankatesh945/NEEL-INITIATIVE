@@ -16,6 +16,7 @@ const OngoingProjects = () => {
     "/images/ongoingprojects/moon.jpg",
     "/images/ongoingprojects/game.jpg",
     "/images/ongoingprojects/project3.png"
+    // "/videos/ongoing-projects/agriculture.mp4"
     
     // "/images/achievements/img2.jpg",
     // "/images/achievements/img3.jpg",
@@ -26,7 +27,8 @@ const OngoingProjects = () => {
     "Agriculture Project",
     "Moon Landing Page",
     "Game Project",
-    "Project 4"
+    "Project 4",
+    "good"
   ]);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
