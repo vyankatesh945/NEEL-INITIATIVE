@@ -20,21 +20,23 @@
   overflow: hidden;
 }
 
-.slider-image,video.slider-imag {
+.slider-image,
+video.slider-image {
   width: 100%;
   border-radius: 10px;
 }
 
-.prev-button, .next-button {
+.prev-button,
+.next-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: beige;
   border: none;
-  padding: 15px; 
+  padding: 15px;
   cursor: pointer;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,33 +44,70 @@
 
 .prev-button {
   left: 10px;
-  z-index: 1; 
-} 
+  z-index: 1;
+}
 
 .next-button {
   right: 10px;
   z-index: 1;
 }
 
-.prev-button:hover, .next-button:hover {
+.prev-button:hover,
+.next-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.prev-button img, .next-button img {
+.prev-button img,
+.next-button img {
   width: 50px;
   height: 50px;
 }
 
-.prev-button:hover img, .next-button:hover img {
-  width: 70px; 
+.prev-button:hover img,
+.next-button:hover img {
+  width: 70px;
   height: 70px;
 }
 
-.slider-caption {
+.scrolling-text-container {
   margin-top: 10px;
-  font-size: 1.2rem;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  animation: scrollText 50s linear infinite, pauseText 55s linear infinite;
+  font-size: 2rem;
   color: white;
-  text-align: center;
-  max-width: 90%;
-  word-wrap: break-word;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+@keyframes pauseText {
+  85%, 100% {
+    animation-timing-function: ease-out;
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-heading {
+    font-size: 2.5rem; 
+  }
+  .scrolling-text {
+    font-size: 1rem; 
+  }
 }

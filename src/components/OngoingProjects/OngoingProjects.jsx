@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import previous from '/images/nextprevious/previous-svgrepo-com.svg'; 
-import next from '/images/nextprevious/next-svgrepo-com.svg'; 
+import previous from '/images/nextprevious/previous-svgrepo-com.svg';
+import next from '/images/nextprevious/next-svgrepo-com.svg';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import './OngoingProjects.css';
 
 const OngoingProjects = () => {
-
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
@@ -14,14 +14,8 @@ const OngoingProjects = () => {
     "/images/ongoingprojects/agriculture.jpg",  
     "/images/ongoingprojects/moon.jpg",        
     "/videos/ongoing-projects/agriculture.mp4", 
-    "/images/ongoingprojects/project3.png"     
-  ]);
-
-  const [captions, setCaptions] = useState([
-    "Agriculture Project",
-    "Moon Landing Page",
-    "Video Project: Autonomous System",        
-    "Project 4"
+    "/images/ongoingprojects/ag1.jpg",
+    "/images/ongoingprojects/ag2.jpg"
   ]);
 
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
@@ -36,11 +30,12 @@ const OngoingProjects = () => {
     setCurrentMediaIndex((prevIndex) => (prevIndex === media.length - 1 ? 0 : prevIndex + 1));
   };
 
+  const scrollingText = "NEEL-INITIATIVE is a leading provider of agricultural solutions dedicated to helping farmers optimize their operations and improve their livelihoods. We offer a comprehensive range of innovative products and services designed to enhance crop yields, reduce input costs, and promote sustainable farming practices. By leveraging cutting-edge technology and expertise, we empower farmers to make informed decisions and achieve greater success in their agricultural endeavors.";
+
   return (
     <div className="inner-container">
       <h1 className="achievements-heading" data-aos="fade-down">Ongoing Projects</h1>
       <div className="slider-container">
-        {/* Previous Button with Image Fallback */}
         <button onClick={handlePrev} className="prev-button">
           <img
             src={previous} 
@@ -51,7 +46,6 @@ const OngoingProjects = () => {
           {prevMediaError && "Previous"}
         </button>
 
-        {/* Rendering images and VideoS*/}
         {currentMediaIndex === 2 ? (
           <video
             src={media[currentMediaIndex]}
@@ -70,11 +64,6 @@ const OngoingProjects = () => {
           />
         )}
 
-        <div className="slider-caption">
-          <p>{captions[currentMediaIndex]}</p>
-        </div>
-
-        {/* Next Button with Image Fallback */}
         <button onClick={handleNext} className="next-button">
           <img
             src={next}  
@@ -84,6 +73,10 @@ const OngoingProjects = () => {
           />
           {nextMediaError && "Next"}
         </button>
+      </div>
+
+      <div className="scrolling-text-container">
+        <p className="scrolling-text">{scrollingText}</p>
       </div>
     </div>
   );
