@@ -16,7 +16,7 @@
 }
 
 .menu-icon {
-  display: none; /* Hide by default */
+  display: none; 
 }
 
 
@@ -68,7 +68,7 @@
 
  
   .menu-icon {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     margin-bottom: 0px;
     display:block; 
     margin-left: auto;
@@ -82,7 +82,7 @@
     align-items: flex-end; 
     width: 100%;
     padding: 10px;
-    background-color: #000;
+    background-color: black;
     transition: max-height 0.3s ease; 
   }
 
@@ -98,21 +98,13 @@
   }
 
   .auth-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
     margin-top: 20px;
     width: 100%;
-    padding-right: 20px;
+    justify-content: space-between;
   }
 
   .sign-in, .get-started {
-    width: auto;
+    width: 48%;
     margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .get-started {
-    width: auto;
   }
 }
